@@ -1,6 +1,8 @@
-import React from 'react'
-import TopBar from './components/TopBar'
 import './App.css'
+
+import React from 'react'
+
+import TopBar from './components/TopBar'
 
 function App() {
   return (
