@@ -1,29 +1,25 @@
-import './App.css'
+import './App.css';
 
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import TopBar from './components/TopBar'
+import TopBar from './components/TopBar';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <TopBar />
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.tsx</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  )
+    <>
+      <TopBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/posts" component={Posts} />
+              <Route exact path="/new-post" component={NewPost} />
+              <Route render={() => <h1>Home</h1>} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
-export default App
+export default App;
