@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -13,7 +14,14 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Tooltip from '@mui/material/Tooltip';
 
-const pages = ['Tech', 'Blog', 'Work'];
+// import history from 'history/createBrowserHistory';
+
+const routesItems = [
+  { label: 'Tech', value: '/tech' },
+  { label: 'Blog', value: '/blog' },
+  { label: 'Work', value: '/work' },
+];
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function TopBar() {
@@ -23,6 +31,8 @@ export default function TopBar() {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
   );
+
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -80,21 +90,21 @@ export default function TopBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography align="center">{page}</Typography>
+              {routesItems.map((item) => (
+                <MenuItem key={item.label} onClick={() => navigate(item.value)}>
+                  <Typography align="center">{item.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {routesItems.map((item) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={item.label}
+                onClick={() => navigate(item.value)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {item.label}
               </Button>
             ))}
           </Box>

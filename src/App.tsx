@@ -4,18 +4,21 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import TopBar from './components/TopBar';
-import Home from './pages/Home';
+import Blog from './routes/Blog';
+import Home from './routes/Home';
+import Tech from './routes/Tech';
+import Work from './routes/Work';
 
 function App() {
   return (
     <>
-      <TopBar />
       <BrowserRouter>
+        <TopBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/posts" component={Posts} />
-              <Route exact path="/new-post" component={NewPost} />
-              <Route render={() => <h1>Home</h1>} /> */}
+          <Route path="/tech" element={<Tech />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/work" element={<Work />} />
         </Routes>
       </BrowserRouter>
     </>
