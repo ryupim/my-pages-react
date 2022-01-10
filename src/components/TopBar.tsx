@@ -52,14 +52,13 @@ export default function TopBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            // sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+          <Button
+            onClick={() => navigate('')}
+            sx={{ my: 2, color: 'white', display: 'block', typography: 'h6', textTransform: 'none'}}
           >
             ryupim
-          </Typography>
+          </Button>
+          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -108,6 +107,9 @@ export default function TopBar() {
               </Button>
             ))}
           </Box>
+
+
+
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

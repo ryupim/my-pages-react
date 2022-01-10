@@ -1,0 +1,13 @@
+.techBody{
+    display: flex;
+}
+
+.techBodyLeft, .techBodyRight{
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.techBodyCenter{
+    flex: 6;
+}
