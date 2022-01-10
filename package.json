@@ -67,5 +67,6 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "all"
-  }
+  },
+  "homepage": "https://ryupim.github.io/my-pages-react"
 }

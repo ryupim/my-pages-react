@@ -12,7 +12,7 @@ import Work from './routes/Work';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <TopBar />
         <Routes>
           <Route path="/" element={<Home />} />
