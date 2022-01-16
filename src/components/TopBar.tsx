@@ -24,7 +24,7 @@ const routesItems = [
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export default function TopBar() {
+const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
   );
@@ -145,3 +145,5 @@ export default function TopBar() {
     </AppBar>
   );
 }
+
+export default TopBar;

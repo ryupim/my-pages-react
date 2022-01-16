@@ -1,6 +1,4 @@
-import '../css/tech.css';
-
-export default function Tech() {
+const Tech = () => {
   return (
     <div className="techBody">
       <div className="techBodyLeft">
@@ -11,3 +9,5 @@ export default function Tech() {
     </div>
   );
 }
+
+export default Tech;

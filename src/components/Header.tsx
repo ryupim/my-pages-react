@@ -1,8 +1,6 @@
-import '../css/header.css';
-
 import bgImage from '../img/sky_00128.jpg';
 
-export default function Header() {
+const Header = () =>  {
     return (
         <div className="header">
             <div className="headerTitles">
@@ -17,3 +15,4 @@ export default function Header() {
     )
 }
 
+export default Header;

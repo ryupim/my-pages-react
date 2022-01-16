@@ -1,3 +1,7 @@
-export default function Blog() {
-  return <div>Blog</div>;
+const Blog = () => {
+  return (
+    <div>Blog</div>
+  );
 }
+
+export default Blog;
